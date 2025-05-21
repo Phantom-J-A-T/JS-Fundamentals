@@ -1,3 +1,11 @@
 const x = Number(process.argv[2]); // Convert first argument to a number
 
-console.log(Number.isInteger(x) ? "C is fun\n".repeat(x).trim() : "Missing number of occurrences");
+if (!Number.isInteger(x)) {
+  console.log("Missing number of occurrences");
+} else {
+  let i = 0;
+  while (i < x) {
+    console.log("C is fun");
+    i++;
+  }
+}
